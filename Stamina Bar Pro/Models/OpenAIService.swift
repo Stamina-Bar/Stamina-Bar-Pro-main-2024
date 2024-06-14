@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftUI
 
 
 class OpenAIService {
@@ -50,6 +51,17 @@ enum SenderRole: String, Codable {
     case system
     case user
     case assistant
+    
+    var messageBackgroundColor: Color {
+        switch self {
+        case .system:
+            return .primary
+        case .user:
+            return .gray.opacity(0.2)
+        case .assistant:
+            return Color(uiColor: .lightGray)
+        }
+    }
 }
 
 struct OpenAIChatResponse: Decodable {

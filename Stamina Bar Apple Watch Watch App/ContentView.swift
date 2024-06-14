@@ -33,6 +33,18 @@ struct ContentView: View {
             }
             .tag(1)
             .containerBackground(colorForHeartRate(healthKitModel.latestHeartRate).gradient, for: .tabView)
+            
+            VStack(alignment: .trailing) {
+                staminaBarView.stressFunction(heart_rate: healthKitModel.latestHeartRate)
+                HStack {
+                    Text(healthKitModel.latestHeartRateVariability.formatted(.number.precision(.fractionLength(0))) + " HRV")
+                        .font(.system(.body, design: .rounded).monospacedDigit().lowercaseSmallCaps())
+                    Image(systemName: "waveform.path.ecg")
+                        .foregroundColor(.blue)
+                }
+            }
+            .tag(2)
+            .containerBackground(colorForHeartRate(healthKitModel.latestHeartRate).gradient, for: .tabView)
         }
         .tabViewStyle(.verticalPage)
     }

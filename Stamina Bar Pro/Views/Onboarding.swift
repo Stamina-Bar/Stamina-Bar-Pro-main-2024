@@ -1,7 +1,7 @@
 //
 //  Onboarding.swift
 //  Stamina Bar Pro
-//
+//  iPhone
 //  Created by Bryce Ellis on 1/4/24.
 //
 

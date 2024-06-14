@@ -70,7 +70,7 @@ struct ChatView: View {
             
             Text(message.content)
                 .padding()
-                .background(message.role == .user ? Color.blue : Color.gray.opacity(0.2))
+                .background(message.role.messageBackgroundColor)
                 .foregroundColor(message.role == .user ? .white : .primary) // Adjusted for better text visibility
                 .cornerRadius(15)
                 .textSelection(.enabled)
@@ -96,6 +96,7 @@ struct ContentView_Previews: PreviewProvider {
         let mockWorkoutManager = WorkoutManager()
         let viewModel = ChatView.ViewModel(workoutManager: mockWorkoutManager)
         ChatView(viewModel: viewModel)
+            .environmentObject(mockWorkoutManager)
     }
 }
 
