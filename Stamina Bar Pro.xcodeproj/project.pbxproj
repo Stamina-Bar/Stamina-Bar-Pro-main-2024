@@ -111,6 +111,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA32A2B22C1FEDB700963538 /* Stamina-Bar-Pro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Stamina-Bar-Pro-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DA542C702B5F874700F0DFBC /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		DA542C722B5F876D00F0DFBC /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		DA542C742B5F87E600F0DFBC /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
@@ -241,6 +242,7 @@
 		DA55310D2B45FE9B004AF31F /* Stamina Bar Pro */ = {
 			isa = PBXGroup;
 			children = (
+				DA32A2B22C1FEDB700963538 /* Stamina-Bar-Pro-Info.plist */,
 				DA55313D2B4A28FD004AF31F /* Stamina Bar Pro.entitlements */,
 				DA55310E2B45FE9B004AF31F /* Stamina_Bar_ProApp.swift */,
 				DA9170DF2B6638C000599913 /* Views */,
@@ -859,6 +861,7 @@
 				DEVELOPMENT_TEAM = 339H39SFM9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stamina-Bar-Pro-Info.plist";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "The listed Health data is used as input for each message you send to your A.I. Personal Trainer. Please select Turn On All.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Please allow Stamina Bar Pro to write new data to Health ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -870,7 +873,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.5;
+				MARKETING_VERSION = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -897,6 +900,7 @@
 				DEVELOPMENT_TEAM = 339H39SFM9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stamina-Bar-Pro-Info.plist";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "The listed Health data is used as input for each message you send to your A.I. Personal Trainer. Please select Turn On All.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Please allow Stamina Bar Pro to write new data to Health ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -908,7 +912,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.5;
+				MARKETING_VERSION = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1020,7 +1024,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.5;
+				MARKETING_VERSION = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1055,7 +1059,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.5;
+				MARKETING_VERSION = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1168,7 +1172,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro.watchkitapp.Stamina-Bar-Apple-Watch-Complications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1199,7 +1203,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro.watchkitapp.Stamina-Bar-Apple-Watch-Complications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
