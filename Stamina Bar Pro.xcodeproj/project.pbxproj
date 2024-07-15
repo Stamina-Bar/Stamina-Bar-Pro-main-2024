@@ -38,6 +38,19 @@
 		DA7D9E632BEC5CC900A0D9F4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D9E622BEC5CC900A0D9F4 /* OnboardingView.swift */; };
 		DA7D9E652BEC618100A0D9F4 /* HealthKitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D9E642BEC618100A0D9F4 /* HealthKitModel.swift */; };
 		DA7D9E672BEC6CC100A0D9F4 /* StaminaBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D9E662BEC6CC100A0D9F4 /* StaminaBarView.swift */; };
+		DA85DB302C4585A500B492BE /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB2F2C4585A500B492BE /* WorkoutManager.swift */; };
+		DA85DB322C45860A00B492BE /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB312C45860A00B492BE /* ElapsedTimeView.swift */; };
+		DA85DB342C45870000B492BE /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB332C45870000B492BE /* SummaryView.swift */; };
+		DA85DB362C45878A00B492BE /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB352C45878A00B492BE /* ControlsView.swift */; };
+		DA85DB382C4587B400B492BE /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB372C4587B400B492BE /* HapticManager.swift */; };
+		DA85DB3A2C4587F200B492BE /* SessionPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB392C4587F200B492BE /* SessionPagingView.swift */; };
+		DA85DB3C2C458A6A00B492BE /* VerticalCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB3B2C458A6A00B492BE /* VerticalCarouselView.swift */; };
+		DA85DB3E2C458A8A00B492BE /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB3D2C458A8A00B492BE /* InfoView.swift */; };
+		DA85DB402C458C0F00B492BE /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB3F2C458C0F00B492BE /* StartView.swift */; };
+		DA85DB422C45B70F00B492BE /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB412C45B70F00B492BE /* HeartRateView.swift */; };
+		DA85DB442C45B7C400B492BE /* TotalDistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB432C45B7C400B492BE /* TotalDistanceView.swift */; };
+		DA85DB462C45B7DB00B492BE /* CurrentCaloriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB452C45B7DB00B492BE /* CurrentCaloriesView.swift */; };
+		DA85DB482C45B7F300B492BE /* CardioFitnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA85DB472C45B7F300B492BE /* CardioFitnessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +162,19 @@
 		DA7D9E622BEC5CC900A0D9F4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DA7D9E642BEC618100A0D9F4 /* HealthKitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitModel.swift; sourceTree = "<group>"; };
 		DA7D9E662BEC6CC100A0D9F4 /* StaminaBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaminaBarView.swift; sourceTree = "<group>"; };
+		DA85DB2F2C4585A500B492BE /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		DA85DB312C45860A00B492BE /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		DA85DB332C45870000B492BE /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		DA85DB352C45878A00B492BE /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		DA85DB372C4587B400B492BE /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		DA85DB392C4587F200B492BE /* SessionPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPagingView.swift; sourceTree = "<group>"; };
+		DA85DB3B2C458A6A00B492BE /* VerticalCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCarouselView.swift; sourceTree = "<group>"; };
+		DA85DB3D2C458A8A00B492BE /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		DA85DB3F2C458C0F00B492BE /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		DA85DB412C45B70F00B492BE /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		DA85DB432C45B7C400B492BE /* TotalDistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDistanceView.swift; sourceTree = "<group>"; };
+		DA85DB452C45B7DB00B492BE /* CurrentCaloriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCaloriesView.swift; sourceTree = "<group>"; };
+		DA85DB472C45B7F300B492BE /* CardioFitnessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioFitnessView.swift; sourceTree = "<group>"; };
 		DA8A9AC72BE5A15800E268C0 /* StaminaBarProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaminaBarProTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,6 +308,7 @@
 		DA7D9E172BEC533500A0D9F4 /* Stamina Bar Apple Watch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				DA85DB2E2C45859100B492BE /* Workout */,
 				DA7D9E1C2BEC533700A0D9F4 /* Assets.xcassets */,
 				DA7D9E1A2BEC533500A0D9F4 /* ContentView.swift */,
 				DA7D9E642BEC618100A0D9F4 /* HealthKitModel.swift */,
@@ -337,6 +364,26 @@
 				DA7D9E562BEC546500A0D9F4 /* Info.plist */,
 			);
 			path = "Stamina Bar Apple Watch Complications";
+			sourceTree = "<group>";
+		};
+		DA85DB2E2C45859100B492BE /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				DA85DB472C45B7F300B492BE /* CardioFitnessView.swift */,
+				DA85DB352C45878A00B492BE /* ControlsView.swift */,
+				DA85DB452C45B7DB00B492BE /* CurrentCaloriesView.swift */,
+				DA85DB312C45860A00B492BE /* ElapsedTimeView.swift */,
+				DA85DB372C4587B400B492BE /* HapticManager.swift */,
+				DA85DB412C45B70F00B492BE /* HeartRateView.swift */,
+				DA85DB3D2C458A8A00B492BE /* InfoView.swift */,
+				DA85DB392C4587F200B492BE /* SessionPagingView.swift */,
+				DA85DB3F2C458C0F00B492BE /* StartView.swift */,
+				DA85DB332C45870000B492BE /* SummaryView.swift */,
+				DA85DB432C45B7C400B492BE /* TotalDistanceView.swift */,
+				DA85DB3B2C458A6A00B492BE /* VerticalCarouselView.swift */,
+				DA85DB2F2C4585A500B492BE /* WorkoutManager.swift */,
+			);
+			path = Workout;
 			sourceTree = "<group>";
 		};
 		DA9170DD2B66388600599913 /* Models */ = {
@@ -658,11 +705,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA85DB3A2C4587F200B492BE /* SessionPagingView.swift in Sources */,
+				DA85DB462C45B7DB00B492BE /* CurrentCaloriesView.swift in Sources */,
 				DA7D9E632BEC5CC900A0D9F4 /* OnboardingView.swift in Sources */,
+				DA85DB362C45878A00B492BE /* ControlsView.swift in Sources */,
+				DA85DB322C45860A00B492BE /* ElapsedTimeView.swift in Sources */,
+				DA85DB3C2C458A6A00B492BE /* VerticalCarouselView.swift in Sources */,
+				DA85DB422C45B70F00B492BE /* HeartRateView.swift in Sources */,
+				DA85DB3E2C458A8A00B492BE /* InfoView.swift in Sources */,
 				DA7D9E1B2BEC533500A0D9F4 /* ContentView.swift in Sources */,
 				DA7D9E652BEC618100A0D9F4 /* HealthKitModel.swift in Sources */,
 				DA7D9E192BEC533500A0D9F4 /* Stamina_Bar_Apple_WatchApp.swift in Sources */,
+				DA85DB382C4587B400B492BE /* HapticManager.swift in Sources */,
+				DA85DB342C45870000B492BE /* SummaryView.swift in Sources */,
+				DA85DB442C45B7C400B492BE /* TotalDistanceView.swift in Sources */,
 				DA7D9E672BEC6CC100A0D9F4 /* StaminaBarView.swift in Sources */,
+				DA85DB302C4585A500B492BE /* WorkoutManager.swift in Sources */,
+				DA85DB402C458C0F00B492BE /* StartView.swift in Sources */,
+				DA85DB482C45B7F300B492BE /* CardioFitnessView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
