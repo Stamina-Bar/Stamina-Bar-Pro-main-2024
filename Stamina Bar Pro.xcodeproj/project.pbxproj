@@ -25,7 +25,7 @@
 		DA7D9E1B2BEC533500A0D9F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D9E1A2BEC533500A0D9F4 /* ContentView.swift */; };
 		DA7D9E1D2BEC533700A0D9F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D9E1C2BEC533700A0D9F4 /* Assets.xcassets */; };
 		DA7D9E202BEC533700A0D9F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7D9E1F2BEC533700A0D9F4 /* Preview Assets.xcassets */; };
-		DA7D9E392BEC533700A0D9F4 /* Stamina Bar Apple Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DA7D9E162BEC533500A0D9F4 /* Stamina Bar Apple Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DA7D9E392BEC533700A0D9F4 /* Al Stamina Bar.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DA7D9E162BEC533500A0D9F4 /* Al Stamina Bar.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DA7D9E4C2BEC546500A0D9F4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7D9E4B2BEC546500A0D9F4 /* WidgetKit.framework */; };
 		DA7D9E4E2BEC546500A0D9F4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7D9E4D2BEC546500A0D9F4 /* SwiftUI.framework */; };
 		DA7D9E512BEC546500A0D9F4 /* Stamina_Bar_Apple_Watch_Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D9E502BEC546500A0D9F4 /* Stamina_Bar_Apple_Watch_Complications.swift */; };
@@ -92,7 +92,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				DA7D9E392BEC533700A0D9F4 /* Stamina Bar Apple Watch Watch App.app in Embed Watch Content */,
+				DA7D9E392BEC533700A0D9F4 /* Al Stamina Bar.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +128,7 @@
 		DA55313B2B46E72F004AF31F /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		DA55313D2B4A28FD004AF31F /* Stamina Bar Pro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Stamina Bar Pro.entitlements"; sourceTree = "<group>"; };
 		DA55313E2B4A29E4004AF31F /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
-		DA7D9E162BEC533500A0D9F4 /* Stamina Bar Apple Watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stamina Bar Apple Watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA7D9E162BEC533500A0D9F4 /* Al Stamina Bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Al Stamina Bar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7D9E182BEC533500A0D9F4 /* Stamina_Bar_Apple_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamina_Bar_Apple_WatchApp.swift; sourceTree = "<group>"; };
 		DA7D9E1A2BEC533500A0D9F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA7D9E1C2BEC533700A0D9F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 				DA55310B2B45FE9B004AF31F /* Stamina Bar Pro.app */,
 				DA55311B2B45FE9C004AF31F /* Stamina Bar ProTests.xctest */,
 				DA5531252B45FE9C004AF31F /* Stamina Bar ProUITests.xctest */,
-				DA7D9E162BEC533500A0D9F4 /* Stamina Bar Apple Watch Watch App.app */,
+				DA7D9E162BEC533500A0D9F4 /* Al Stamina Bar.app */,
 				DA7D9E252BEC533700A0D9F4 /* Stamina Bar Apple Watch Watch AppTests.xctest */,
 				DA7D9E2F2BEC533700A0D9F4 /* Stamina Bar Apple Watch Watch AppUITests.xctest */,
 				DA7D9E492BEC546500A0D9F4 /* Stamina Bar Apple Watch ComplicationsExtension.appex */,
@@ -444,7 +444,7 @@
 			);
 			name = "Stamina Bar Apple Watch Watch App";
 			productName = "Stamina Bar Apple Watch Watch App";
-			productReference = DA7D9E162BEC533500A0D9F4 /* Stamina Bar Apple Watch Watch App.app */;
+			productReference = DA7D9E162BEC533500A0D9F4 /* Al Stamina Bar.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DA7D9E242BEC533700A0D9F4 /* Stamina Bar Apple Watch Watch AppTests */ = {
@@ -873,7 +873,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.7;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -912,7 +912,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.7;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1015,18 +1015,17 @@
 				DEVELOPMENT_TEAM = 339H39SFM9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Stamina Bar Apple Watch";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Hello world please let e";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Hello world please let me ";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow Health to share health and fitness data to Stamina Bar app to work as expected";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Please allow Health to update new Exercises that you record in the app";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "zbellis-studios.Stamina-Bar-Pro";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.7;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Al Stamina Bar";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1050,18 +1049,17 @@
 				DEVELOPMENT_TEAM = 339H39SFM9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Stamina Bar Apple Watch";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Hello world please let e";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Hello world please let me ";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow Health to share health and fitness data to Stamina Bar app to work as expected";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Please allow Health to update new Exercises that you record in the app";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "zbellis-studios.Stamina-Bar-Pro";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.7;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Al Stamina Bar";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1172,7 +1170,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.7;
+				MARKETING_VERSION = 1.1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro.watchkitapp.Stamina-Bar-Apple-Watch-Complications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1203,7 +1201,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.7;
+				MARKETING_VERSION = 1.1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "zbellis-studios.Stamina-Bar-Pro.watchkitapp.Stamina-Bar-Apple-Watch-Complications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;

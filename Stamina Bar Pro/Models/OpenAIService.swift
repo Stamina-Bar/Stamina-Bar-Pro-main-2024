@@ -57,7 +57,7 @@ enum SenderRole: String, Codable {
         case .system:
             return .primary
         case .user:
-            return .gray.opacity(0.2)
+            return .blue
         case .assistant:
             return Color(uiColor: .lightGray)
         }
