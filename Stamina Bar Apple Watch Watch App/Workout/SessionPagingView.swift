@@ -10,7 +10,7 @@ import WatchKit
 import SwiftUI
 
 struct SessionPagingView: View {
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: watchOSWorkoutManager
     @Environment(\.isLuminanceReduced) var isLuminanceReduced
     @State private var selection: Tab = .verticalCarousel
 

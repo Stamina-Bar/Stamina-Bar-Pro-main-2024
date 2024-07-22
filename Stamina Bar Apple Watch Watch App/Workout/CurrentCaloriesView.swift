@@ -10,7 +10,7 @@ import HealthKit
 
 struct CurrentCaloriesView: View {
     // MARK: Data Fields
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: watchOSWorkoutManager
     @Environment(\.scenePhase) private var scenePhase
 
     let staminaBarView = StaminaBarView()
@@ -46,7 +46,7 @@ struct CurrentCaloriesView: View {
 
 struct CurrentCaloriesView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentCaloriesView().environmentObject(WorkoutManager())
+        CurrentCaloriesView().environmentObject(watchOSWorkoutManager())
     }
 }
 

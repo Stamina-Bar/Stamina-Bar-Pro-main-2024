@@ -11,7 +11,7 @@ import SwiftUI
 import WatchKit
 
 struct SummaryView: View {
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: watchOSWorkoutManager
     @Environment(\.dismiss) var dismiss
     let staminaBarView = StaminaBarView()
     @State private var showError = false
@@ -86,31 +86,27 @@ struct SummaryView: View {
                     .foregroundStyle(.white)
                     Divider()
 
-                    Text("Stamina % Average")
                     //StaminaBarView(data: workoutManager.averageHeartRate)
+                    if workoutManager.averageHeartRate < 100 {
+                        Text("Light Exercise")
+                    } else if workoutManager.averageHeartRate < 150 {
+                        Text("Moderate Activity")
+                    } else {
+                        Text("Tough Exercise")
+                    }
                     (staminaBarView.stressFunction(heart_rate: workoutManager.averageHeartRate) as AnyView)
+
+
                     Divider()
 
-                    SummaryMetricView(title: "Daily Calories Burned",
-                                      value: formattedCalories(workoutManager.basalEnergy + workoutManager.totalDailyEnergy) + " Cals")
+                    SummaryMetricView(title: "Calories Burned",
+                                      value: formattedCalories(workoutManager.activeEnergy) + " Cals")
                     .foregroundStyle(Color.orange)
                     Divider()
 
                     SummaryMetricView(title: "Distance Tracked",
                                       value: workoutManager.distance.formatted(.number.precision(.fractionLength(2))) + " miles")
                     .foregroundStyle(.blue)
-                    Divider()
-
-                    SummaryMetricView(title: "HRV",
-                                      value: workoutManager.heartRateVariability.formatted(.number.precision(.fractionLength(0))))
-                    .foregroundStyle(.blue)
-                    Divider()
-
-                    SummaryMetricView(title: "V02 Max",
-                                      value: workoutManager.currentVO2Max.formatted(.number.precision(.fractionLength(1))))
-                    .foregroundStyle(.green)
-
-
                     Button("Done") {
                         dismiss()
                     }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 50)

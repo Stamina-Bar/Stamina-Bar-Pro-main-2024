@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Stamina_Bar_Apple_Watch_Watch_AppApp: App {
-        @StateObject private var workoutManager = WorkoutManager()
+        @StateObject private var workoutManager = watchOSWorkoutManager()
         
         @SceneBuilder var body: some Scene {
             WindowGroup {

@@ -18,60 +18,44 @@ struct WorkoutType: Identifiable {
 }
 
 struct StartView: View {
-        @EnvironmentObject var workoutManager: WorkoutManager
-        @State private var showingSettings = false
-
-        var workoutTypes: [WorkoutType] = [
-            WorkoutType(workoutType: .walking, workoutSupportingImage: "custom.StaminaBar")
-        ]
-    var body: some View {
-                VStack {
-                    Spacer()
-                    if let workoutType = workoutTypes.first {
-                        NavigationLink(destination: SessionPagingView(),
-                                       tag: workoutType.workoutType,
-                                       selection: $workoutManager.selectedWorkout) {
-                            HStack {
-                                Text("Start any Exercise")
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.5)
-                            }
-                        }
-                                       .overlay(RoundedRectangle(cornerRadius: 30).stroke(Color.blue, lineWidth: 2))
-                    }
-        
-        
-        
-                    Image(systemName: "info.circle.fill")
-                        .foregroundColor(.blue)
-                        .frame(width: 60, height: 60)
-        
-        
-                //                .background(Circle().fill(Color.white.opacity(0.1)))
-                        .onTapGesture {
-        
-                                showingSettings = true
-        
-                        }
-//                        .sheet(isPresented: $showingSettings) {
-//                            SettingsView() // Settings view to show
-//                        }
-        
-                }
-                .onTapGesture {
-                    workoutManager.requestAuthorization()
-                    print("Heart Rate: \(workoutManager.heartRate)")
-                    print("HRV: \(workoutManager.heartRateVariability)")
-                    print("V02 Max: \(workoutManager.currentVO2Max)")
-                    print("Calories: \(workoutManager.activeEnergy)")
-
-                }
-//                .modifier(ConditionalScrollIndicatorModifier(shouldHide: shouldShowOnboarding))
-//                .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
-//                    OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
-//                })
+    @EnvironmentObject var watchOSWorkoutManager: watchOSWorkoutManager
+    @State private var showingSettings = false
+    //    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
-
+    var workoutTypes: [WorkoutType] = [
+        WorkoutType(workoutType: .walking, workoutSupportingImage: "custom.StaminaBar")
+    ]
+    var body: some View {
+        VStack {
+            Spacer()
+            if let workoutType = workoutTypes.first {
+                NavigationLink(destination: SessionPagingView(),
+                               tag: workoutType.workoutType,
+                               selection: $watchOSWorkoutManager.selectedWorkout) {
+                    HStack {
+                        Text("Start any Exercise")
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.5)
+                    }
+                }
+                               .overlay(RoundedRectangle(cornerRadius: 30).stroke(Color.blue, lineWidth: 2))
+            }
+            
+            Image(systemName: "info.circle.fill")
+                .foregroundColor(.blue)
+                .frame(width: 60, height: 60)
+//                .background(Circle().fill(Color.white.opacity(0.1)))
+                .onTapGesture {
+                    showingSettings = true
+                    
+                }
+                .sheet(isPresented: $showingSettings) {
+                    SettingsView() // Settings view to show
+                }
+        }
+        .onAppear {
+            watchOSWorkoutManager.requestAuthorization()
+        }
     }
 }
 
@@ -92,7 +76,7 @@ extension HKWorkoutActivityType: Identifiable {
     public var id: UInt {
         rawValue
     }
-
+    
     var name: String {
         switch self {
         case .walking:

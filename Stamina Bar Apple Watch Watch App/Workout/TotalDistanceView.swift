@@ -11,7 +11,7 @@ import SwiftUI
 import HealthKit
 
 struct TotalDistanceView: View {
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: watchOSWorkoutManager
     @Environment(\.scenePhase) private var scenePhase
 
     //    var distanceTraveled: Double {
@@ -61,7 +61,7 @@ struct TotalDistanceView: View {
 
 struct TotalDistanceView_Previews: PreviewProvider {
     static var previews: some View {
-        TotalDistanceView().environmentObject(WorkoutManager())
+        TotalDistanceView().environmentObject(watchOSWorkoutManager())
     }
 }
 

@@ -19,13 +19,13 @@ struct ControlsView: View {
 
 struct ControlsView_Previews: PreviewProvider {
     static var previews: some View {
-        ControlsView().environmentObject(WorkoutManager())
+        ControlsView().environmentObject(watchOSWorkoutManager())
     }
 }
 
 
 struct HelperControlsView: View {
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: watchOSWorkoutManager
 
     var body: some View {
         VStack {

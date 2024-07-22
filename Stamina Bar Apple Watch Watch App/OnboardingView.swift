@@ -32,7 +32,7 @@ struct OnboardingView: View {
             VStack {
             
                 Button("Authorize HealthKit") {
-                    requestHealthKitAuthorization()
+
                 }
                 .padding()
                 .background(Color.blue)

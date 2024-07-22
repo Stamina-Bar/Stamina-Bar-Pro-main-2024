@@ -10,7 +10,7 @@ import SwiftUI
 
 struct VerticalCarouselView: View {
     @State private var carouselSelection = 0
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: watchOSWorkoutManager
 
     var body: some View {
             TabView(selection: $carouselSelection) {
@@ -22,8 +22,6 @@ struct VerticalCarouselView: View {
                     .tag(2)
                 CurrentCaloriesView()
                     .tag(3)
-                CardioFitnessView()
-                    .tag(4)
             }
             .tabViewStyle(.carousel)
             .navigationBarBackButtonHidden(true)

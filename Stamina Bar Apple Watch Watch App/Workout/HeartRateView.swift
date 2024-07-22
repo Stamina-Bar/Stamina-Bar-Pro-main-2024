@@ -9,7 +9,7 @@ import SwiftUI
 import HealthKit
 
 struct HeartRateView: View {
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: watchOSWorkoutManager
 
 
 
@@ -49,7 +49,7 @@ struct HeartRateView: View {
 
 struct HeartRateViewView_Previews: PreviewProvider {
     static var previews: some View {
-        HeartRateView().environmentObject(WorkoutManager())
+        HeartRateView().environmentObject(watchOSWorkoutManager())
     }
 }
 

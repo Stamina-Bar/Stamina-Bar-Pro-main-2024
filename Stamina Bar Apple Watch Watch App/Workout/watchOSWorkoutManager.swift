@@ -8,7 +8,7 @@
 import Foundation
 import HealthKit
 
-class WorkoutManager: NSObject, ObservableObject {
+class watchOSWorkoutManager: NSObject, ObservableObject {
     private var healthUpdateTimer: Timer?
 
     var selectedWorkout: HKWorkoutActivityType? {
@@ -57,11 +57,11 @@ class WorkoutManager: NSObject, ObservableObject {
         builder?.beginCollection(withStart: startDate) { (success, error) in
 
         }
-        self.fetchDailyActiveEnergyBurned()
-        self.fetchDailyBasalEnergyBurn()
-        self.fetchMostRecentVO2Max()
-        self.fetchMostRecentHRV()
-        self.fetchDailyStepCount()
+//        self.fetchDailyActiveEnergyBurned()
+//        self.fetchDailyBasalEnergyBurn()
+//        self.fetchMostRecentVO2Max()
+//        self.fetchMostRecentHRV()
+//        self.fetchDailyStepCount()
     }
 
     func requestAuthorization() {
@@ -71,11 +71,11 @@ class WorkoutManager: NSObject, ObservableObject {
 
         let typesToRead: Set = [
             HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!,
-            HKQuantityType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
+//            HKQuantityType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
             HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,
-            HKQuantityType.quantityType(forIdentifier: .basalEnergyBurned)!,
+//            HKQuantityType.quantityType(forIdentifier: .basalEnergyBurned)!,
             HKQuantityType.quantityType(forIdentifier: .heartRate)!,
-            HKQuantityType.quantityType(forIdentifier: .vo2Max)!,
+//            HKQuantityType.quantityType(forIdentifier: .vo2Max)!,
             HKObjectType.activitySummaryType()
         ]
 
@@ -161,7 +161,7 @@ class WorkoutManager: NSObject, ObservableObject {
 }
 
 // MARK: - HKWorkoutSessionDelegate
-extension WorkoutManager: HKWorkoutSessionDelegate {
+extension watchOSWorkoutManager: HKWorkoutSessionDelegate {
     func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState,
                         from fromState: HKWorkoutSessionState, date: Date) {
         DispatchQueue.main.async {
@@ -186,7 +186,7 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
 }
 
 // MARK: - HKLiveWorkoutBuilderDelegate
-extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
+extension watchOSWorkoutManager: HKLiveWorkoutBuilderDelegate {
     func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
 
 

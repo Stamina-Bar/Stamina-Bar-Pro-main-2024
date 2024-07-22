@@ -11,7 +11,7 @@ import HealthKit
 import SwiftUI
 
 struct InfoView: View {
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: watchOSWorkoutManager
     @State private var showSwipeInstruction = true
     @AppStorage("hapticsEnabled") var hapticsEnabled: Bool = true
 
@@ -31,14 +31,6 @@ struct InfoView: View {
                 }
                 (staminaBarView.stressFunction(heart_rate: workoutManager.heartRate) as AnyView)
             }
-            .onTapGesture {
-                workoutManager.requestAuthorization()
-                print("Heart Rate: \(workoutManager.heartRate)")
-                print("HRV: \(workoutManager.heartRateVariability)")
-                print("V02 Max: \(workoutManager.currentVO2Max)")
-                print("Calories: \(workoutManager.activeEnergy)")
-
-            }
         }
     }
 }
@@ -48,7 +40,7 @@ struct InfoView: View {
 
 struct InfoViewView_Previews: PreviewProvider {
     static var previews: some View {
-        InfoView().environmentObject(WorkoutManager())
+        InfoView().environmentObject(watchOSWorkoutManager())
     }
 }
 
