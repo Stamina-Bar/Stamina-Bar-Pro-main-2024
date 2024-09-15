@@ -210,17 +210,17 @@ struct ChatView: View {
             })
             .padding()
             
-            AlternateIconsView()
-                .tabItem {
-                    Image(systemName: "square.stack.3d.down.right")
-                    Text("App Icons")
-                }
-            
             WebView(url: URL(string: "https://www.staminabar.app/faq")!)
                 .edgesIgnoringSafeArea(.all)
                 .tabItem {
                     Image(systemName: "info.circle.fill")
                     Text("Info")
+                }
+            
+            AlternateIconsView()
+                .tabItem {
+                    Image(systemName: "square.stack.3d.down.right")
+                    Text("App Icons")
                 }
         }
     }
