@@ -131,33 +131,54 @@ struct ChatView: View {
     @ObservedObject var viewModel: ViewModel
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     @EnvironmentObject var workoutManager: WorkoutManager
+    @State private var isTextVisible: Bool = false // Controls visibility of health questions
     
     var body: some View {
-        
-        
         TabView {
-//            HealthDataMetricsView()
-//                .tabItem {
-//                    Image(systemName: "bubble.left.and.text.bubble.right.fill")
-//                    Text("AI Chat")
-//                }
-            
             
             VStack(alignment: .leading) {
-                Text("Stamina Bar Pro")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+                Button(action: {
+                    isTextVisible.toggle() // Toggle visibility
+                }) {
+                    HStack {
+                        Text("Ask any Health question.")
+                        Spacer()
+                        Image(systemName: isTextVisible ? "chevron.up" : "chevron.down")
+                    }
                     .padding(.horizontal)
+                    .foregroundColor(.blue)
+                }
                 
-                Divider()
-                Text("Ask any Health question.")
+                // List of health questions, visible only when `isTextVisible` is true
+                if isTextVisible {
+                    VStack(alignment: .leading) {
+                        
+                        
+                        ForEach(["What is V02 max and what does my value mean for my overall stamina?", "Is my resting heart rate healthy?", "How does my Heart Rate Variability (HRV) relate to my overall fitness level and stress management?", "Do I need to increase my step count?", "What does my basal energy rate mean for me"], id: \.self) { question in
+                            Button(action: {
+                                // Send the selected question to the message thread
+                                viewModel.currentInput = question
+                                viewModel.sendMessage()
+                            }) {
+                                Text(question)
+                                    .padding()
+                                    .foregroundColor(.blue)
+                                    .background(Color(UIColor.secondarySystemBackground))
+                                    .cornerRadius(10)
+                                    .padding(.horizontal)
+                            }
+                        }
+                    }
+                }
                 
+                // ScrollView for the message list
                 ScrollView {
-                    ForEach(viewModel.messages.filter({$0.role != .system}), id: \.id) { message in
+                    ForEach(viewModel.messages.filter({ $0.role != .system }), id: \.id) { message in
                         messageView(message: message)
                     }
                 }
                 
+                // Input Field and Send Button
                 HStack {
                     TextField("💬 Enter a message...", text: $viewModel.currentInput)
                         .padding(10)
@@ -178,7 +199,6 @@ struct ChatView: View {
                             .background(Circle().fill(Color.white))
                     }
                     .disabled(viewModel.currentInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-                    
                 }
             }
             .tabItem {
@@ -197,19 +217,15 @@ struct ChatView: View {
                 }
             
             WebView(url: URL(string: "https://www.staminabar.app/faq")!)
-                .edgesIgnoringSafeArea(.all) 
+                .edgesIgnoringSafeArea(.all)
                 .tabItem {
                     Image(systemName: "info.circle.fill")
                     Text("Info")
                 }
-            
-            
         }
-        
-        
     }
     
-    
+    // Message View Helper
     func messageView(message: Message) -> some View {
         HStack(alignment: .top, spacing: 10) {
             if message.role == .assistant {
@@ -225,8 +241,7 @@ struct ChatView: View {
             Text(message.content)
                 .padding()
                 .background(message.role == .user ? Color.blue : Color.gray.opacity(0.2))
-            //                .background(message.role.messageBackgroundColor)
-                .foregroundColor(message.role == .user ? .white : .primary) // Adjusted for better text visibility
+                .foregroundColor(message.role == .user ? .white : .primary)
                 .cornerRadius(15)
                 .textSelection(.enabled)
             
@@ -243,6 +258,7 @@ struct ChatView: View {
         }
     }
 }
+
 
 
 
