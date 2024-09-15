@@ -22,34 +22,29 @@ struct WebView: UIViewRepresentable {
 }
 
 struct AlternateIconsView: View {
-    // Array of icons with the "-p" prefix to indicate preview images
+    @Binding var shouldShowOnboarding: Bool // Pass this state in your parent view
     let icons = ["Default-p", "BLM-p", "USA-p", "Pride-p", "Halloween-p" ]
     
-    // Adaptive grid layout for a more organized presentation
     let columns = [GridItem(.adaptive(minimum: 100), spacing: 20)]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            // Heading
             Text("Choose App Icon")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.horizontal)
             
-            // Description
             Text("Select your preferred app icon from the options below. Tap on a preview to apply it as your new app icon.")
                 .font(.body)
                 .foregroundColor(.secondary)
                 .padding(.horizontal)
             
-            // Grid layout for Icons
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(icons, id: \.self) { icon in
                     Button(action: {
                         setAppIcon(iconName: icon)
                     }) {
                         VStack {
-                            // Icon Image
                             Image(icon)
                                 .resizable()
                                 .scaledToFit()
@@ -57,12 +52,10 @@ struct AlternateIconsView: View {
                                 .cornerRadius(15)
                                 .shadow(radius: 5)
                             
-                            // Icon Name without "-p"
                             Text(icon.dropLast(2))
                                 .font(.headline)
                                 .foregroundColor(.primary)
                             
-                            // Description of the action
                             Text("Tap to apply")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
@@ -78,9 +71,10 @@ struct AlternateIconsView: View {
             
             Spacer()
             
-            // Additional Element: Reset Button
-            HStack {
+            // Buttons for resetting and showing onboarding
+            HStack(spacing: 20) {
                 Spacer()
+                
                 Button(action: {
                     resetToDefaultIcon()
                 }) {
@@ -92,6 +86,19 @@ struct AlternateIconsView: View {
                         .cornerRadius(10)
                         .shadow(radius: 5)
                 }
+                
+                Button(action: {
+                    shouldShowOnboarding = true // Set the onboarding view to reappear
+                }) {
+                    Text("Re-Onboard")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.green)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                }
+                
                 Spacer()
             }
             .padding(.bottom)
@@ -103,9 +110,8 @@ struct AlternateIconsView: View {
     func setAppIcon(iconName: String) {
         guard UIApplication.shared.supportsAlternateIcons else { return }
         
-        // Remove "-p" from the icon name to get the actual icon name
         let actualIconName = iconName.replacingOccurrences(of: "-p", with: "")
-        let iconNameToSet = actualIconName.isEmpty ? nil : actualIconName // Handle case where iconName is empty
+        let iconNameToSet = actualIconName.isEmpty ? nil : actualIconName
         
         UIApplication.shared.setAlternateIconName(iconNameToSet) { error in
             if let error = error {
@@ -126,6 +132,7 @@ struct AlternateIconsView: View {
         }
     }
 }
+
 
 struct ChatView: View {
     @ObservedObject var viewModel: ViewModel
@@ -217,11 +224,18 @@ struct ChatView: View {
                     Text("Info")
                 }
             
-            AlternateIconsView()
+            AlternateIconsView(shouldShowOnboarding: $shouldShowOnboarding)
                 .tabItem {
                     Image(systemName: "square.stack.3d.down.right")
                     Text("App Icons")
                 }
+            
+            if shouldShowOnboarding {
+                OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+                    .transition(.slide)
+            }
+
+                
         }
     }
     
