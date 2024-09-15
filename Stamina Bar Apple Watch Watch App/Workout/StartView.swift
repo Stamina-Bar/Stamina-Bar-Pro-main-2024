@@ -10,9 +10,11 @@ import HealthKit
 import SwiftUI
 
 struct WorkoutType: Identifiable {
+    
     var id: HKWorkoutActivityType {
         return workoutType
     }
+    
     let workoutType: HKWorkoutActivityType
     let workoutSupportingImage: String
 }
@@ -22,9 +24,12 @@ struct StartView: View {
     @State private var showingSettings = false
     //    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
+    
     var workoutTypes: [WorkoutType] = [
-        WorkoutType(workoutType: .walking, workoutSupportingImage: "custom.StaminaBar")
+        WorkoutType(workoutType: .tableTennis, workoutSupportingImage: "custom.StaminaBar")
+        
     ]
+    
     var body: some View {
         VStack {
             Spacer()
@@ -79,8 +84,10 @@ extension HKWorkoutActivityType: Identifiable {
     
     var name: String {
         switch self {
-        case .walking:
+        case .tableTennis:
             return "Start Stamina Bar"
+//        case .running:
+//            return "Start Stamina Bar"
         default:
             return ""
         }

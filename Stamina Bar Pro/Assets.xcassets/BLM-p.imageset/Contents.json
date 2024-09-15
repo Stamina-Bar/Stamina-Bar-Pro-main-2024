@@ -1,9 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "StaminaBarWidget.png",
-      "idiom" : "watch",
-      "scale" : "2x"
+      "filename" : "BLM-p.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {
